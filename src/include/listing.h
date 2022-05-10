@@ -1,6 +1,6 @@
 /**
  *  Copyright (C) 2004 Stefan Knöfel
- * 
+ *
  *  This file is part of GSwiss.
  *
  *  GSwiss is free software; you can redistribute it and/or modify
@@ -18,20 +18,20 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-extern int listPlayerList(PLAYERLIST *aPlayerList, FILE *file);
+extern int listPlayerList (PLAYERLIST *aPlayerList, FILE *file);
 
-extern void listTable(PLAYERLIST *aPlayerList, FILE *file, int playedRounds);
+extern void listTable (PLAYERLIST *aPlayerList, FILE *file, int playedRounds);
 
-extern int listPairingList(PAIRINGLIST *aPairngList, FILE *file);
+extern int listPairingList (PAIRINGLIST *aPairngList, FILE *file);
 
-extern int listPairings(PAIRINGLIST *aPairngList, FILE *file, int playedRounds);
+extern int listPairings (PAIRINGLIST *aPairngList, FILE *file,
+                         int playedRounds);
 
-extern int listResults(PAIRINGLIST *aPairngList, FILE *file, int playedRounds);
+extern int listResults (PAIRINGLIST *aPairngList, FILE *file,
+                        int playedRounds);
 
-extern void listGroup(PLAYERGROUP *aPlayerGroup, FILE *file);
+extern void listGroup (PLAYERGROUP *aPlayerGroup, FILE *file);
 
-extern void listAllGroups(PLAYERGROUP *firstPlayerGroup, FILE *file);
+extern void listAllGroups (PLAYERGROUP *firstPlayerGroup, FILE *file);
 
-extern void getTitleStr(int titleId, char *title);
-
-
+extern void getTitleStr (int titleId, char *title);

@@ -1,6 +1,6 @@
 /**
  *  Copyright (C) 2004 Stefan Knöfel
- * 
+ *
  *  This file is part of GSwiss.
  *
  *  GSwiss is free software; you can redistribute it and/or modify
@@ -25,11 +25,11 @@ typedef struct playercard
 {
   /** Id des Spielers im Turnier / playerid in tournament */
   int pId;
-  
-  /** 
-   * Speilerdaten / playerdata 
+
+  /**
+   * Speilerdaten / playerdata
    */
-  
+
   /** Name */
   char name[31];
   /** Wertzahl (Turnierwertzahl) / rating (tournamentrating) */
@@ -45,29 +45,30 @@ typedef struct playercard
    */
   int title;
 
-  /** 
-   * gegnerIds und resultate der letzten runden / opponentids and results of the previous rounds 
+  /**
+   * gegnerIds und resultate der letzten runden / opponentids and results of
+   * the previous rounds
    */
-   
+
   /** punkte (mal 2) / points (mult. 2)*/
   int points;
   /** buchholzwertung (mal 2) */
   int buchholz;
-  /** buchholzsummenwertung (mal 2) */  
+  /** buchholzsummenwertung (mal 2) */
   int buchholzsum;
   /** gegner / opponents */
-  int  *opponents;
+  int *opponents;
   /** farben / colors */
-  int  *colors;
+  int *colors;
   /** Resultate (0,1,=,+,-) / results */
   char *results;
   /** Schwimmerstatus in bisherigen runden / floaterstatus in previous rounds*/
-  int  *floaterhistory;
+  int *floaterhistory;
   /** counter fuer die groesse der arrays */
   int reservedRounds;
 
-  /** 
-   *  Attribute zur Farbermittlung / attributes for determining next color 
+  /**
+   *  Attribute zur Farbermittlung / attributes for determining next color
    *  Definition: 0 = weiss / white
    *              1 = schwarz / black
    */
@@ -80,16 +81,15 @@ typedef struct playercard
   int preferedColor;
   /** Gewichtung der beforzugten Farbe / emphasis of next color   0-3*/
   int preferedColorEmphasis;
-  
-  
-  /** 
+
+  /**
    *  Attribute zur Auslosung / attributes for drawing
    */
-  
+
   /** spieler erhielt kampflosen Punkt / player got point without playing */
   int hasRecievedFreePoint;
-  /** Schwimmerstatus / floaterstatus: 
-   * 0 kein floater 
+  /** Schwimmerstatus / floaterstatus:
+   * 0 kein floater
    * 3 war letzten 2 runden downfloater
    * 2 war letzte Runde downfloater
    * 1 war vorletzte Runde downfloater
@@ -119,7 +119,6 @@ typedef struct playerlist
   struct playerlistentry *last;
   int size;
 } PLAYERLIST;
-
 
 /**
  * Eintrag in der resultierenden Paarungsliste / entry in pairinglist
@@ -166,7 +165,7 @@ typedef struct playeradministration
 {
   /* Eine vekettete Liste mit den Spielern */
   struct playerlist *player_list;
-  /* eine HashTable mit den Spielern für den Direktzugriff über pID 
+  /* eine HashTable mit den Spielern für den Direktzugriff über pID
      =^ Array mit pId als index; toDo: Eventuell durch einen Tree ersetzen */
   struct playercard **player_ht;
   int size_ht;
