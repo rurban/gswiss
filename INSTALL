@@ -1,0 +1,29 @@
+To compile GSwiss you can simpy type make.
+
+You can run './configure' first, to create a user defined configuration 
+(for now you can only select the languages english or german).
+If you cant run ./configure you can create a 'config' file by hand, insert
+  CONFFLAG= -DLANGUAGE_EN
+for english language or
+  CONFFLAG= -DLANGUAGE_DE
+for german language.
+
+After successful compiling you will find a file named gswiss
+in the bin/ directory. This is the only file you need to run GSwiss.
+
+
+
+
+Zum Kompilieren kann man einfach make benutzen.
+
+Es ist möglich mittels './configure' das Programm an eigene Bedürfnisse
+anzupassen (zur Zeit ist nur die Auswahl der Sprache möglich, Englisch 
+oder Deutsch). Falls aus irgend einem Grund ./configure nicht funktioniert,
+kann per Hand eine Datei 'config' angelegt werden mit folgendem Inhalt
+  CONFFLAG= -DLANGUAGE_DE
+für deutsch oder
+  CONFFLAG= -DLANGUAGE_EN
+für Englisch
+
+Nach dem Kompilieren befindet sich eine Datei namens gswiss im Verzeichnis
+bin/ . Das ist die einzige Datei die zum Starten von GSwiss benötigt wird.

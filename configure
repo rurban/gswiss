@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo "choose your language ('EN' or 'DE'):";
+
+#read the lang
+read LANG;
+
+#to upper case
+export LANG=$(echo "$LANG" | tr '[[:lower:]]' '[[:upper:]]')
+
+#test if it is a known lang
+if (test "$LANG" = "DE") || (test "$LANG" = "EN"); then
+  echo "set language to $LANG"
+  echo "CONFFLAG= -DLANGUAGE_$LANG" > config
+else
+  echo "That is no correct language, run again and choose one of the given options"
+fi
+

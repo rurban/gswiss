@@ -1,0 +1,80 @@
+1. About GSwiss
+2. Installation
+3. Usage
+4. Copyright and license information
+
+1. About GSwiss
+
+GSwiss is a chess tournament management software. Its a tool to allot the 
+pairings of a chess tournament using the usual "swiss" pairing system.
+In this version it is simply a command line program, a comfortable GUI
+is planned for a later version.
+
+2. Installation
+
+see file INSTALL
+
+3. Usage
+
+To obtain an overview about the parameters and options of the
+program use the option -h or --help.
+
+This Program generates the pairings of a chess tournament round by round.
+It uses the data of players and the tournament process as input and
+generates the data of players and the tournament process inclusive
+the pairings of the next round as output.
+
+The program takes input from <stdin> and writes output to <stdout>.
+You can use the params -i and -o to replace this streams through
+files.
+
+The format of the in- and output is the CSV data format. Every player
+uses one line which contains all needed tournament data of this player.
+The separator char is the comma (,) there is no text separator used. CSV 
+files can be viewed end edited with common spread sheet programms (e.g.
+the free office suite Openoffice.org). The following CSV options are required:
+  field separator ,
+  no text separator
+  no caption line
+  no fixed column width 
+
+The tournament data of a player is sorted in following order:
+  No.,Name,Rating,Title,OpponentNo.R1,ColorR1,ResultR1,OpponentNo.R2,ColorR2,ResultR2,...
+
+Fields:
+  No.           : the id of the player in the tournament, a number > 0
+                  it is recommended to use continuous numbers
+  Name          : the name of the player max 30 chars
+  Rating        : the rating of the player (max 4 digits)
+  Title         : the title of the player (WFM,FM,WIM,IM,WGM,IGM) or a empty field
+  OpponentNo.RX : the id of the opponent of this player in round X (or 0 for bye)
+  ColorRX       : the color of this player in round X (W or B) or (W or S in german version)
+  ResultRX      : the result of the match in round X (0 lost, 1 won,
+                  = remis, + free point, - no point (maybe withdrawal))
+
+The number of fields has to be identical at all lines.
+The input contains the general information of a player and
+the information of all played rounds (4+3*X fields).
+The output contains the input data plus the opponent and color
+of the next round for every player.
+
+Example:
+Input:
+  1,Player1,1600,,4,B,0
+  2,Player2,1500,,3,W,=
+  3,Player3,1800,,2,B,=
+  4,Player4,2100,IM,1,W,1
+Output:
+  1,Player1,1600,,4,B,0,2,W
+  2,Player2,1500,,3,W,=,1,B
+  3,Player3,1800,,2,B,=,4,W
+  4,Player4,2100,IM,1,W,1,3,B
+
+4. Copyright and license information
+
+Copytright (C) 2004 Stefan Knöfel
+
+This program comes with NO WARRANTY, to the extent permitted by law.
+You may redistribute copies under the terms of the GNU General Public 
+License.For more information about these matters, see the file 
+named COPYING.
