@@ -18,15 +18,14 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-extern PAIRINGLIST *
+PAIRINGLIST *
 playeradministration_alotpairing (PLAYERADMINISTRATION *aPlayerAdministration,
                                   int playedRounds, FILE *debugTarget);
 
-extern PAIRINGLIST *playeradministration_createResultList (
+PAIRINGLIST *playeradministration_createResultList (
     PLAYERADMINISTRATION *aPlayerAdministration, int targetRound);
 
-extern int
-playeradministration_evaluate (PLAYERADMINISTRATION *aPlayerAdministration,
-                               int playedRounds, int reportErrors);
+int playeradministration_evaluate (PLAYERADMINISTRATION *aPlayerAdministration,
+                                   int playedRounds, int reportErrors);
 
 extern int pairing_optimizeFactor;

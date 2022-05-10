@@ -41,142 +41,139 @@ typedef struct playercardcomparator
  * Vergleichsfunktion fuer zwei spieler nach punkten,
  * Spieler mit mehr Punkten sind "kleiner"
  */
-extern int comparePlayercardForPointsDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForPointsDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach punkten,
  * Spieler mit mehr Punkten sind "groesser"
  */
-extern int comparePlayercardForPointsAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForPointsAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach spielerid
  */
-extern int comparePlayercardForIdDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForIdDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach spielerid
  */
-extern int comparePlayercardForIdAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForIdAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach buchholzwertung,
  * Spieler mit groesserer Wertung sind "kleiner"
  */
-extern int comparePlayercardForBuchholzDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForBuchholzDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach buchholzwertung,
  * Spieler mit groesserer Wertung sind "groesser"
  */
-extern int comparePlayercardForBuchholzAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForBuchholzAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach buchholzsummenwertung,
  * Spieler mit groesserer Wertung sind "kleiner"
  */
-extern int comparePlayercardForBuchholzsumDesc (PLAYERCARD *pc1,
-                                                PLAYERCARD *pc2);
+int comparePlayercardForBuchholzsumDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach buchholzsummenwertung,
  * Spieler mit groesserer Wertung sind "groesser"
  */
-extern int comparePlayercardForBuchholzsumAsc (PLAYERCARD *pc1,
-                                               PLAYERCARD *pc2);
+int comparePlayercardForBuchholzsumAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach farbe,
  * Spieler mit weiss sind "kleiner"
  */
-extern int comparePlayercardForColorAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForColorAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach farbe,
  * Spieler mit weiss sind "groesser"
  */
-extern int comparePlayercardForColorDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForColorDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach Sollfarbe,
  * Spieler mit weiss sind "kleiner"
  */
-extern int comparePlayercardForPreferedColorAsc (PLAYERCARD *pc1,
-                                                 PLAYERCARD *pc2);
+int comparePlayercardForPreferedColorAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach Sollfarbe,
  * Spieler mit weiss sind "groesser"
  */
-extern int comparePlayercardForPreferedColorDesc (PLAYERCARD *pc1,
-                                                  PLAYERCARD *pc2);
+int comparePlayercardForPreferedColorDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach Gewichtung der Sollfarbe
  */
-extern int comparePlayercardForPreferedColorEmphasisAsc (PLAYERCARD *pc1,
-                                                         PLAYERCARD *pc2);
+int comparePlayercardForPreferedColorEmphasisAsc (PLAYERCARD *pc1,
+                                                  PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach Gewichtung der Sollfarbe ungekehrt
  */
-extern int comparePlayercardForPreferedColorEmphasisDesc (PLAYERCARD *pc1,
-                                                          PLAYERCARD *pc2);
+int comparePlayercardForPreferedColorEmphasisDesc (PLAYERCARD *pc1,
+                                                   PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler alphabetsch
  */
-extern int comparePlayercardForNameAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForNameAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler ungekehrt alphabetsch
  */
-extern int comparePlayercardForNameDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForNameDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach rating,
  * Spieler mit groesserem Rating sind "groesser"
  */
-extern int comparePlayercardForRatingAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForRatingAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach rating,
  * Spieler mit groesserem Rating sind "kleiner"
  */
-extern int comparePlayercardForRatingDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForRatingDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach titel,
  * Spieler mit hoeherem Titel sind "groesser"
  */
-extern int comparePlayercardForTitleAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForTitleAsc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Vergleichsfunktion fuer zwei spieler nach tite,
  * Spieler mit hoeherem Titel sind "kleiner"
  */
-extern int comparePlayercardForTitleDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
+int comparePlayercardForTitleDesc (PLAYERCARD *pc1, PLAYERCARD *pc2);
 
 /**
  * Sortiert eine Liste
  * benoetigt PlayerListe und id der Standard-Vergleichsfunktion
  */
-extern void playerlist_sortWithStandardComparator (PLAYERLIST *aPlayerList,
-                                                   int comparator);
+void playerlist_sortWithStandardComparator (PLAYERLIST *aPlayerList,
+                                            int comparator);
 
 /**
  * Sortierung einer spielerliste
  */
-extern void playerlist_sort (PLAYERLIST *aPlayerList,
-                             PLAYERCARDCOMPARATOR *comparator);
+void playerlist_sort (PLAYERLIST *aPlayerList,
+                      PLAYERCARDCOMPARATOR *comparator);
 
 /**
  * Vergleicht 2 Spielerkarten mit einer Standard-Vergleichsfunktion
  */
-extern int comparePlayerCardsWithStandardComparator (
-    PLAYERCARD *aPlayerCard, PLAYERCARD *anotherPlayerCard, int comparator);
+int comparePlayerCardsWithStandardComparator (PLAYERCARD *aPlayerCard,
+                                              PLAYERCARD *anotherPlayerCard,
+                                              int comparator);
 
 /**
  * Sortierung einer Paarungsliste nach festem Muster
  */
-extern void pairinglist_sort (PAIRINGLIST *aPairingList);
+void pairinglist_sort (PAIRINGLIST *aPairingList);

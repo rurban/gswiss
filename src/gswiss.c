@@ -28,17 +28,11 @@ int playedRounds = 0;
 int expectedRounds = 7;
 
 #include "include/gswiss.h"
-
 #include "include/language.h"
-
 #include "include/structdef.h"
-
 #include "include/basiclistoperations.h"
-
 #include "include/sorting.h"
-
 #include "include/pairing.h"
-
 #include "include/listing.h"
 
 char
