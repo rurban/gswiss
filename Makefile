@@ -1,9 +1,8 @@
 
-
 OBJECTS= gswiss.o listing.o pairing.o sorting.o basiclistoperations.o
 TARGET= gswiss
 CC= gcc
-CFLAGS= -Wall
+CFLAGS= -Wall -Wextra
 CONFFLAG=
 -include config
 srcdir= src

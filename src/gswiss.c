@@ -590,7 +590,7 @@ main (int argc, char **argv)
       if (strlen (param_inputFile) > FILENAME_MAX)
         {
           if (param_printerrors)
-            fprintf (stderr, L_PARAMERROR_FILETOLONG, strlen (param_inputFile),
+            fprintf (stderr, L_PARAMERROR_FILETOLONG, (int)strlen (param_inputFile),
                      'i', FILENAME_MAX);
           exit (3);
         }
@@ -616,7 +616,7 @@ main (int argc, char **argv)
         {
           if (param_printerrors)
             fprintf (stderr, L_PARAMERROR_FILETOLONG,
-                     strlen (param_outputFile), 'o', FILENAME_MAX);
+                     (int)strlen (param_outputFile), 'o', FILENAME_MAX);
           exit (4);
         }
       else

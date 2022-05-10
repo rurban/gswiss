@@ -240,7 +240,7 @@ playeradministration_create ()
           else
             {
               newPlayerAdministration->size_ht = initialPlayerAnz;
-              memset (newPlayerAdministration->player_ht, (int)NULL,
+              memset (newPlayerAdministration->player_ht, 0,
                       sizeof (PLAYERCARD *) * initialPlayerAnz);
             }
         }
@@ -450,7 +450,7 @@ playeradministration_ht_insert (PLAYERADMINISTRATION *aPlayerAdministration,
       /* mit NULL vorbelegen / fill new fields with NULL */
       memset (
           &(aPlayerAdministration->player_ht[aPlayerAdministration->size_ht]),
-          (int)NULL,
+          0,
           sizeof (PLAYERCARD *) * (nextSize - aPlayerAdministration->size_ht));
 
       aPlayerAdministration->size_ht = nextSize;

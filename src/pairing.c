@@ -86,6 +86,7 @@ pair_checkrule_canplay (PLAYERCARD *pCard1, PLAYERCARD *pCard2)
 int
 pair_checkrule_candownfloat (PLAYERCARD *pCard1)
 {
+  (void)pCard1;
   /* players can always downfloat, but this does low the quality */
   return 1;
 }
